@@ -1,13 +1,2 @@
 # Default ignored files
-/shelf/
-/workspace.xml
-/misc.xml
-/modules.xml
-/Paper-sami-auto-updater.iml
-/inspectionProfiles/profiles_settings.xml
-/inspectionProfiles/Project_Default.xml
-/vcs.xml
-/discord.xml
-/.idea/misc.xml
-*.xml
-.idea/Paper-sami-auto-updater.iml
+*.py
