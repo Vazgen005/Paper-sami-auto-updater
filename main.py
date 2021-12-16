@@ -35,3 +35,10 @@ with open(f'{os.getcwd()}/{fname}', 'wb') as f:
     f.write(requests.get(url=dw).content)
 
 print(f'P{fname[1:]} successfully downloaded!')
+
+# print('Editing start.sh') #If you need to, you can change the file to run the server.
+#
+# with open("start.sh", "r+") as f: #Or start.bat
+#     f.write(f"java -Xms1024M -Xmx1024M -jar {fname} nogui") #Properties
+
+print('Done!')
