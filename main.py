@@ -42,3 +42,5 @@ print(f'P{fname[1:]} successfully downloaded!')
 #     f.write(f"java -Xms1024M -Xmx1024M -jar {fname} nogui") #Properties
 
 print('Done!')
+os.system('pause')
+exit()
