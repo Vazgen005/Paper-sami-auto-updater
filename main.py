@@ -17,7 +17,6 @@ print('New paper version was found!')
 
 if os.path.exists(f'{os.getcwd()}/{fname}'):
     print('The latest version already exists')
-    os.system('pause')
     exit()
 
 iterr = 0
@@ -42,5 +41,4 @@ print(f'P{fname[1:]} successfully downloaded!')
 #     f.write(f"java -Xms1024M -Xmx1024M -jar {fname} nogui") #Properties
 
 print('Done!')
-os.system('pause')
 exit()
