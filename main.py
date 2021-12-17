@@ -4,11 +4,15 @@ import os
 
 mcv = '1.18.1'
 
-print('Searching for a new version of paper...')
+print(f'In search of a new version of paper for {mcv} version...')
 
 main = json.loads(requests.get(url=f'https://papermc.io/api/v2/projects/paper/versions/{mcv}/').content)
 
-maxb = max(main['builds'])
+try:
+    maxb = max(main['builds'])
+except KeyError:
+    print(f'Paper does not exist on {mcv} version')
+    exit(28)
 newv = json.loads(requests.get(url=f'https://papermc.io/api/v2/projects/paper/versions/{mcv}/builds/{maxb}').content)
 fname = newv['downloads']['application']['name']
 dw = f'https://papermc.io/api/v2/projects/paper/versions/{mcv}/builds/{maxb}/downloads/{fname}'
