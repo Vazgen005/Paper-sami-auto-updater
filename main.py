@@ -7,7 +7,6 @@ mcv = '1.18.1'
 print(f'In search of a new version of paper for {mcv} version...')
 
 main = json.loads(requests.get(url=f'https://papermc.io/api/v2/projects/paper/versions/{mcv}/').content)
-
 try:
     maxb = max(main['builds'])
 except KeyError:
@@ -40,10 +39,10 @@ with open(f'{os.getcwd()}/{fname}', 'wb') as f:
 
 print(f'P{fname[1:]} successfully downloaded!')
 
-# print('Editing start.sh') #If you need to, you can change the file to run the server.
-#
-# with open("start.sh", "r+") as f: #Or start.bat
-#     f.write(f"java -Xms1024M -Xmx1024M -jar {fname} nogui") #Properties
+# if os.path.exists(f'{os.getcwd()}/start.sh'):  # If you need to, you can change the file to run the server.
+#     print('Editing start.sh')
+#     with open('start.sh', 'r+') as f:  # Or start.bat
+#         f.write(f"java -Xms1024M -Xmx1024M -jar {fname} nogui")  # Properties
 
 print('Done!')
 exit()
