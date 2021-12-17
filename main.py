@@ -27,8 +27,9 @@ iterr = 0
 fold = os.listdir(os.getcwd())
 for i in fold:
     if i.startswith(f'paper-{mcv}-') and i.endswith('.jar'):
-        print('Deleting the old version...')
-        os.remove(f'{os.getcwd()}/{fold[iterr]}')
+        old = fold[iterr]
+        print(f'Deleting the old {old} version...')
+        os.remove(f'{os.getcwd()}/{old}')
         break
     iterr += 1
 
