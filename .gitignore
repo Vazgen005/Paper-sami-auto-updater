@@ -3,3 +3,14 @@
 /Paper-sami-auto-updater.iml
 *.xml
 .idea/Paper-sami-auto-updater.iml
+*.pyc
+*.toc
+*.zip
+*.manifest
+*.pkg
+*.pyz
+build/main/warn-main.txt
+build/main/xref-main.html
+*.exe
+*.jar
+main.spec
